@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="txtNombre">Nombres: </label> <br>
+        <input type="text" name="txtNombre" id="txtNombre" maxlength="10" minlength="5" value="Jose"
+            placeholder="Ingresa tu nombre" required>
+        <br>
+        <label for="txtEdad">Edad: </label> <br>
+        <input type="number" name="txtEdad" id="txtEdad" min="1" max="20" disabled>
+        <br>
+        <label for="txtFechaNacimiento">Fecha Nacimiento: </label> <br>
+        <input type="date" name="txtFechaNacimiento" id="txtFechaNacimiento">
+        <br>
+
+        <label for="txtCitaMedica">Ingrese fecha y hora de cita médica</label> <br>
+        <input type="datetime-local" name="txtCitaMedica" id="txtCitaMedica"> <br>
+        <label for="txtReclamo">Reclamo:</label><br>
+        <textarea name="txtReclamo" id="txtReclamo" cols="30" rows="10"></textarea> <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+
+</html>

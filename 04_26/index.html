@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('Hola Mundo')
+        // alert('Hola, soy una alerta.')
+        var variable_1 = 20
+        console.log('El valor de variable_1 es: ' + variable_1)
+
+        if (variable_1 == 20)
+            console.log('Hola, el valor de variable_1 es 20')
+
+        if (variable_1 === 20)
+            console.log('Hola, el valor de variable_1 es 20 y además es un number.')
+
+        function multiplicar_por_10(valor) {
+            return valor * 10
+        }
+        function suma_dos_numeros(numero_1, numero_2) {
+            return numero_1 + numero_2
+        }
+        function sumar_dos_numeros_multiplicar(numero_1, numero_2) {
+            var resultado = 0;
+            resultado = resultado + numero_1;
+            resultado = resultado + numero_2;
+            resultado = resultado * 10;
+            return resultado
+        }
+        console.log(resultado_suma)
+        var resultado_multiplicar_por_10 = multiplicar_por_10(resultado_suma)
+        var resultado_suma = null
+        console.log(resultado_suma)
+        console.log(undefined == resultado_suma)
+        console.log(null == resultado_suma)
+        console.log('Resultado de la suma es: ' + resultado_suma)
+        console.log('Resultado de la multiplicación es: ' + resultado_multiplicar_por_10)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

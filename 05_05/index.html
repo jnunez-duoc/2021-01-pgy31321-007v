@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function cargarUsuario(idUsuario) {
+            var listadoUsuarios = $('#listadoUsuarios')
+            $.getJSON('https://jsonplaceholder.typicode.com/users/' + idUsuario, function (usuario) {
+                listadoUsuarios.append('Nombre: ' + usuario.name)
+            })
+        }
+        $(document).ready(function () {
+            var btnCargarDatos = $('#btnCargarDatos')
+
+            btnCargarDatos.click(function (evento) {
+                $.getJSON('https://jsonplaceholder.typicode.com/todos', function (info) {
+                    var datos_como_lista = []
+                    $.each(info, function (indice, valor) {
+                        datos_como_lista.push('<li>' + valor.title + '  <button type="submit" onclick="cargarUsuario(' + valor.userId + ')"">Cargar datos Usuario</button></li>')
+                    })
+                    $('#listado').html(datos_como_lista)
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button type="submit" id="btnCargarDatos">Cargar datos</button>
+    <div class="row">
+        <div class="col">
+            <ol id="listado"></ol>
+        </div>
+        <div class="col">
+            <div id="listadoUsuarios"></div>
+        </div>
+    </div>
+</body>
+
+</html>
